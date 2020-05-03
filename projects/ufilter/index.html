@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Filter it!</title>
+<meta charset="utf-8">
+
+<!-- Add CSS style sheet -->
+<link rel="stylesheet" href="styles/styles.css">
+
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Add materialize icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.5.0.js"
+  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+  crossorigin="anonymous"></script>
+
+  <script src="scripts/scripts.js"></script>
+  <script src="scripts/opencv.js"></script>
+  <script src="scripts/face-api.js"></script>
+
+</head>
+<body>
+   
+  <div id="btn" onclick="slider_control()" >
+    <i class="material-icons slider_icon">settings</i>
+  </div>
+
+  <div class="row">
+    <div class="col s2" id ="slider_outer">
+      <div id="slider_container" class="slider_open">
+
+        <div id="logo_div">
+          
+            <img id="canny"  src="images/logo.png" class="logo_img">
+          
+        </div>
+
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id ="none" src="images/none.png" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>None</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id="gray"  src="images/gray.png" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>Gray</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id="adaptivethreshold"  src="images/Adaptive_threshold.png" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>Adaptive Threshold</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id="threshold"  src="images/Threshold.png" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>Threshold</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id="canny"  src="images/canny.png" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>Canny</div>
+            </div>
+          </div>
+        </div>
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id="blur"  src="images/blur.png" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>Blur</div>
+            </div>
+          </div>
+        </div>
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id="bilateral"  src="images/Bilateral.png" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>Bilateral Blur</div>
+            </div>
+          </div>
+        </div>
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id="landmark"  src="images/landmark.PNG" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>Landmark</div>
+            </div>
+          </div>
+        </div>
+        <div class="filter_card">
+          <div class="filter_div">
+            <img id="halloween"  src="images/mask_4.png" class="filter_name filter_img">
+            <div class="filter_title">
+              <div>Halloween</div>
+            </div>
+          </div>
+        </div>
+
+        
+
+
+        <!-- <a  id="none" class="filter_name txt_selected">None</a>
+        <br>
+        <a id="adaptivethreshold" class="filter_name">ADAPTIVE THRESHOLD</a>
+        <br>
+        <a id="gray" class="filter_name"><img class= "filter_img" src="images/Gray.png">Gray</a>
+        <br>
+        <a id="threshold" class="filter_name">THRESHOLD</a>
+        <br>
+        <a id="blur" class="filter_name">BLUR</a>
+        <br>
+        <a id="bilateral" class="filter_name">Bilateral</a>
+        <br>
+        <a id="medianblur" class="filter_name">Median Blur</a>
+        <br>
+        <a id="canny" class="filter_name">Canny</a>
+        <br>
+        <div class="row">
+          <div class="col s12 m7">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/None.png">
+              </div>
+              <div class="card-action">
+                <a id="none" class="filter_name">No Filter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col" style=>
+            <div class="card filter_img">
+              <div class="card-image">
+                <img src="images/Adaptive_threshold.png">
+              </div>
+              <div class="card-action">
+                <a id="adaptivethreshold" class="filter_name">Adaptive Threshold</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m7">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/Threshold.png">
+              </div>
+              <div class="card-action">
+                <a id="threshold" class="filter_name">Threshold</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col s12 m7">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/Gray.png">
+              </div>
+              <div class="card-action">
+                <a id="gray" class="filter_name"> Gray </a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+
+
+    
+
+
+        <!-- onclick="apply_filter(in_canvas,selected_canvas, ADAPTIVE_THRESHOLD)" -->
+      </div>
+    </div>
+    
+
+    <div class="filter_container col s10">
+
+      <video autoplay="true" id="videoElement"></video>  
+          <div class="row">
+            <div class="canvas_container col s12 m10 offset-m1" onclick="select_canvas(out_canvas_1)">
+              <canvas id="out_canvas_1" class="canvas" width="320" height="240"></canvas>
+              <img id="out_overlay_1"/>
+              <label>Filter 1</label>
+            </div>
+            
+            <div class="canvas_container col s12 m5 offset-m1" onclick="select_canvas(out_canvas_2)">
+              <canvas id="out_canvas_2" class="canvas" width="320" height="240"></canvas>
+              <img id="out_overlay_2"/>
+              <label>Filter 2</label>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="canvas_container col s12 m10 offset-m1" onclick="select_canvas(out_canvas_3)">
+              <canvas id="out_canvas_3" class="canvas" width="320" height="240"></canvas>
+              <img id="out_overlay_3"/>
+              <label>Filter 3</label>
+          </div>
+          
+            <div class="canvas_container col s12 m5 offset-m1" onclick="select_canvas(out_canvas_4)">
+              <canvas id="out_canvas_4" class="canvas" width="320" height="240"></canvas>
+              <img id="out_overlay_4"/>
+              <label>Filter 4</label>
+            </div>
+        </div>
+  
+
+        <div id="button">
+          <a class="waves-effect waves-light btn-small btn_style" onclick=resume()> <i class="material-icons right">play_arrow</i> Resume </a>
+          <a class="waves-effect waves-light btn-small btn_style" onclick=pause()> <i class="material-icons right">pause</i> Pause </a>
+          <a class="waves-effect waves-light btn-small btn_style" onclick=take_photo()> <i class="material-icons right">photo_camera</i> Take Photo </a>
+        </div>
+        
+
+        <br>
+        <br>
+        <br>
+        
+          <div id="bright_bar">
+          <form action="#">
+            <p class="range-field">
+              <input type="range" id="select_canvas5" min="0" max="100" />
+
+            </p>
+          </form>
+          </div>
+
+      </div>
+
+          <div class="fixed-action-btn">
+            <a id = "add_del_canvas" class="btn-floating btn-large light-blue darken-4"><i class="material-icons">iso</i></a>
+            <ul>
+              <li><a class="btn-floating light-blue darken-4"><i class="material-icons" onclick=add_canvas();>add</i></a></li>
+              <li><a class="btn-floating light-blue darken-4"><i class="material-icons" onclick=remove_canvas();>remove</i></a></li>
+            </ul>
+          </div>
+                
+      
+    
+    </div>
+ 
+
+
+</body>
+</html>
