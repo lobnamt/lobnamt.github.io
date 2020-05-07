@@ -336,6 +336,8 @@ function resume(){
   draw(video,out_context_3,out_canvas_3.width,in_canvas.height);
 }
 
+//dhgbchfvdyhcbsgv
+
 function take_photo(){
   if (selected_canvas == 0) {
     M.toast({html: 'Please select a canvas', classes: 'rounded msg-toast'});
