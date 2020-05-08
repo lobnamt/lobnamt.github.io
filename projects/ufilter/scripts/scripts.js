@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 async function load_face_models(){
-  await faceapi.nets.tinyFaceDetector.loadFromUri("/models");
-  await faceapi.nets.faceLandmark68TinyNet.loadFromUri("/models");
+  await faceapi.nets.tinyFaceDetector.loadFromUri("/projects/ufilter/models");
+  await faceapi.nets.faceLandmark68TinyNet.loadFromUri("/projects/ufilter/models");
   console.log("Models loaded")
   is_model_loaded = true;
 
