@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <link rel="stylesheet" href="layout.css">
+ <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ -->
+
+</head>
+
+<style>
+
+#wrapper {
+		  margin-left: auto;
+		  margin-right: auto;
+		  width: 1100px;
+		  }
+#floatright{ 
+			float: right;
+			margin: 10px; 
+			}
+.contact {
+	position: relative;
+	height: 70px;
+	color: #363636;
+	font-size: 36px;
+	font-weight: 100;
+	z-index: 3;
+	padding-top:25px;
+}
+body { background-image: url(bg2.jpg);}
+p {
+	font-size: 16px;
+	line-height: 25px;
+	padding: 0;
+	
+	}
+main {  margin-left: 210px;
+		background-color: rgb(246, 237, 230);
+		color:rgb(157, 134, 118); 
+		font-family:Candara;
+		font-size: 20px;
+		padding: 10px 20px;
+		padding-right: 20px;
+	}
+a {
+	color: #363636;
+	text-decoration: none;
+	opacity: 1;
+	outline: none;
+	}
+
+a:hover {
+	text-decoration: none;
+	color: #3880FF;
+}
+header {
+		background-color: #F6EDE6;
+		height:70px;
+		font-family:Candara;
+		font-weight:150;
+		font-size:36px;
+		border-bottom: 1px solid black;
+		padding-top: 15px;
+		padding-left: 15px;
+		
+		}
+		
+.date {
+	margin: 5px 5px 5px 0;
+	padding: 1px 5px;
+	display: inline-block;
+	vertical-align: top;
+	background: #9D8676;
+	font-size: 13px;
+	color: #fefefe;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	transition: all 0.2s ease 0s;
+	-moz-transition: all 0.2s ease 0s;
+	-webkit-transition: all 0.2s ease 0s;
+	-o-transition: all 0.2s ease 0s;
+	}
+.category {
+	margin: 5px 5px 5px 0;
+	padding: 1px 5px;
+	display: inline-block;
+	vertical-align: top;
+	background: #efefef;
+	font-size: 13px;
+	color: #363636;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	transition: all 0.2s ease 0s;
+	-moz-transition: all 0.2s ease 0s;
+	-webkit-transition: all 0.2s ease 0s;
+	-o-transition: all 0.2s ease 0s;
+}
+ nav {width:190px; 
+	float: left;
+	text-align: center;
+	font-family:Candara;
+	font-weight: bold; 
+	font-size: 1.25em;
+	background-color: rgb(157, 134, 118);
+	}
+nav a { border-bottom: 1px solid rgb(208, 197, 195);
+		text-decoration: none;
+		display:block;
+		padding: 15px;
+	}
+nav a:visited { color: #FFFFFF; }
+nav a:link { color: #FFFFFF;}
+nav a:hover { background-color: #F6EDE6; 
+			color:rgb(157, 134, 118);
+			text-decoration: none;
+			font-size: 125%;
+			} 
+
+
+nav ul { list-style-type: none; 
+       margin: 0; 
+	   padding: 0; 
+} 
+.contact_title {
+	width:105px;
+	display: inline-block;
+}
+	
+	
+</style>
+<body>
+<div id="wrapper">
+<header>
+<a href = "index.html">Lobna Mtet </a>
+&nbsp <a href = "contact.html"> <i class="icon ion-ios-mail" ></i></a>
+&nbsp <a href = "https://www.linkedin.com/in/lobna-m-bb127411a/"><i class="icon ion-logo-linkedin" style="color:#0177AF" ></i></a>
+
+&nbsp <a href = "https://github.com/lobnamt"><i class="icon ion-logo-github" ></i></a>
+</header>
+<nav>
+<ul>
+	<li><a href = "index.html"> About Me </a></li>
+	<li><a href = "Education.html"> Education </a></li>
+	<li><a href = "Work_Experience.html"> Work Experience </a></li>
+	<li><a href = "Contact.html" > Contact</a></li>
+</ul>
+</nav>
+<main>
+
+
+<div class = "contact">Contact Me</div>
+<form method="post" action="mailto:lobnamt1998@gmail.com">
+<span class ="contact_title"> First Name: </span> <input type="text" name="fmail" id="fmail"><br><br>
+<span class = "contact_title">Last Name: </span> <input type="text" name="lmail" id="lmail"><br><br>
+<span class = "contact_title">E-mail:</span> <input type="text" name="email" id="email"><br><br>
+Comments:<br>
+<textarea name="comments" id="comments" rows="4" cols="40"></textarea><br><br>
+<input type="submit" value="Contact" onclick="alert('email send successfully! :)');"> <input type="reset">
+</form>
+</main>
+</div>
+</body>
+</html>
