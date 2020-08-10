@@ -11,7 +11,8 @@ li{
 }
 
 #videoElement {
-	display: none;
+	/* display: none; */
+	opacity: 0;
 	margin-left:auto;
 	margin-right: auto;
 }
