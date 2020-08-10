@@ -291,8 +291,12 @@ function select_canvas(e){
 }
 
 function start(){
+  var consts = {
+    facingMode: {exact: "user"},
+    video: true
+  };
 if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
+  navigator.mediaDevices.getUserMedia(consts)
     .then(function (stream) {
       video.srcObject = stream;
       if(initialized){
@@ -322,6 +326,7 @@ if (navigator.mediaDevices.getUserMedia) {
     .catch(function (err0r) {
       console.log("Something went wrong!: ",err0r);
     });
+    video.setAttribute("playsinline",true);
 }
 }
 
