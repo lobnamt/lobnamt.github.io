@@ -330,5 +330,6 @@ overflow: hidden;
   margin-right: auto;
   background: #f8efe9;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(62, 54, 54, 0.3), 0 6px 20px 0 rgba(78, 70, 69, 0.41);
+  box-shadow: 0 0 0 0 rgba(62, 54, 54, 0.3), 0 6px 20px 0 rgba(78, 70, 69, 0.41);
+  padding: 10px;
 }
