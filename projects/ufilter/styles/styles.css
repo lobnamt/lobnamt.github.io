@@ -13,8 +13,11 @@ li{
 #videoElement {
 	/* display: none; */
 	opacity: 0;
-	margin-left:auto;
-	margin-right: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/* margin-left:auto;
+	margin-right: auto; */
 }
 
 .filter_container{
